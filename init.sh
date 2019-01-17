@@ -16,6 +16,8 @@ git config --global user.email "tracyliu.cs06@nctu.edu.tw"
 sudo apt-get -y install hime
 
 # sublime
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get -y install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get -y update
-sudo apt-get -y install sublime-text-installer
+sudo apt-get -y install sublime-text
