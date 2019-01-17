@@ -8,6 +8,9 @@ sudo apt-get -y install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# vimrc
+cp .vimrc ~/.vimrc
+
 # git
 git config --global user.name  "Tracy Liu"
 git config --global user.email "tracyliu.cs06@nctu.edu.tw"
