@@ -11,6 +11,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # vimrc
 cp .vimrc ~/.vimrc
 
+# set vim as default editor
+export EDITOR=vim
+
 # git
 git config --global user.name  "Tracy Liu"
 git config --global user.email "tracyliu.cs06@nctu.edu.tw"
@@ -28,4 +31,8 @@ sudo apt install net-tools
 sudo apt-get -y install ssh
 sudo apt-get -y install openssh-server
 sudo /etc/init.d/ssh start
+
+# gnome
+sudo apt -y install gnome-screensaver
+echo "alias lock-screen='gnome-screensaver-command -l'" >> ~/.bashrc
 
