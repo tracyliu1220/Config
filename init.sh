@@ -18,6 +18,12 @@ export EDITOR=vim
 git config --global user.name  "Tracy Liu"
 git config --global user.email "tracyliu.cs06@nctu.edu.tw"
 
+# git lg
+git config --global color.ui true
+git config --global alias.lg "log --color --graph --all \
+	--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
+	%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
 # hime
 sudo apt-get -y install hime
 
