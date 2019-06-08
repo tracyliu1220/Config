@@ -9,7 +9,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # vimrc
-cp .vimrc ~/.vimrc
+cp ../.vimrc ~/.vimrc
 
 # set vim as default editor
 export EDITOR=vim
