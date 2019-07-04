@@ -6,9 +6,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
+syntax enable
 
 " highlight
 hi CursorLine term=bold cterm=none ctermbg=237
+hi LineNr cterm=none ctermfg=grey ctermbg=none
+hi CursorLineNr cterm=none ctermfg=yellow ctermbg=none
 
 " imap
 imap {<CR> {<CR>}<Esc>ko
@@ -36,3 +39,6 @@ let g:better_whitespace_enabled=0
 " - :EnableWhitespace
 " - :DisableWhitespace
 " - :StripWhitespace
+
+" autocmd
+autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
