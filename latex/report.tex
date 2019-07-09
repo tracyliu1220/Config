@@ -1,0 +1,41 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{CJKutf8}
+\usepackage{amsmath}
+\usepackage{listings}
+
+\title{
+    \textbf{Report Title} \\
+    \large Report Subtitle \\
+    \small Tracy Liu
+    \author Tracy Liu
+    \date{}
+}
+
+\geometry{a4paper,left=2cm,right=2cm,top=2.8cm,bottom=3.2cm}
+\setlength{\columnsep}{1cm}
+\setlength{\baselineskip}{100pt}
+\linespread{1.2}
+
+\begin{document}
+    \begin{CJK*}{UTF8}{bsmi}
+
+    % title
+    \begin{center}
+        \LARGE\textbf{Report Title} \\
+        \large Report Subtitle \\
+        \small Tracy Liu \\
+    \end{center}
+
+    \begin{multicols*}{2}
+
+    % contents
+    \section{Section}
+        \subsection{Subsection}
+
+    \end{multicols*}
+    \end{CJK*}
+\end{document}
