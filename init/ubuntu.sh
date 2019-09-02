@@ -12,7 +12,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 cp ../.vimrc ~/.vimrc
 
 # set vim as default editor
-export EDITOR=vim
+echo "export EDITOR=vim" >> ~/.bashrc
 
 # git
 git config --global user.name  "Tracy Liu"
@@ -44,3 +44,6 @@ echo "alias lock-screen='gnome-screensaver-command -l'" >> ~/.bashrc
 
 # python3
 sudo apt -y install python3-pip
+
+# formatter
+sudo apt-get -y install clang-format
