@@ -15,6 +15,10 @@ hi CursorLineNr cterm=none ctermfg=yellow ctermbg=none
 
 " imap
 imap {<CR> {<CR>}<Esc>ko
+:map tt<Right> <C-w><Right>
+:map tt<Left> <C-w><Left>
+:map tt<Up> <C-w><Up>
+:map tt<Down> <C-w><Down>
 
 " Plug
 call plug#begin('~/.vim/plugged')
@@ -24,6 +28,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 
 call plug#end()
 
@@ -41,4 +48,20 @@ let g:better_whitespace_enabled=0
 " - :StripWhitespace
 
 " autocmd
-autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+
+" augroup autoformat_settings
+"   autocmd FileType bzl AutoFormatBuffer buildifier
+"   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+"   autocmd FileType dart AutoFormatBuffer dartfmt
+"   autocmd FileType go AutoFormatBuffer gofmt
+"   autocmd FileType gn AutoFormatBuffer gn
+"   autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+"   autocmd FileType java AutoFormatBuffer google-java-format
+"   autocmd FileType python AutoFormatBuffer yapf
+"   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+"   autocmd FileType vue AutoFormatBuffer prettier
+" augroup END
+
+call glaive#Install()
+Glaive codefmt clang_format_executable='/usr/bin/clang-format'
