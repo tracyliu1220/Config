@@ -6,6 +6,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
+set bg=dark
 syntax enable
 
 " highlight
