@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scp mydesk:$1 ~/Temp/
