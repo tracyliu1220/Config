@@ -15,11 +15,14 @@ hi LineNr cterm=none ctermfg=grey ctermbg=none
 hi CursorLineNr cterm=none ctermfg=yellow ctermbg=none
 
 " imap
-imap {<CR> {<CR>}<Esc>ko
+:map {<CR> {<CR>}<Esc>ko
 :map tt<Right> <C-w><Right>
 :map tt<Left> <C-w><Left>
 :map tt<Up> <C-w><Up>
 :map tt<Down> <C-w><Down>
+map <F5> :tabN<LF>
+map <F6> :tabn<LF>
+map <F7> :tabe<Space>
 
 " Plug
 call plug#begin('~/.vim/plugged')
@@ -27,8 +30,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+" :NEARDTree
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
+" :EnableWhitespace
+" :DisableWhitespace
+" :StripWhitespace
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
@@ -40,16 +47,8 @@ let g:airline_theme = "bubblegum"
 let g:better_whitespace_ctermcolor=153
 let g:better_whitespace_enabled=0
 
-" nerdtree
-" - :NERDTree
-"
-" vim-better-whitespace
-" - :EnableWhitespace
-" - :DisableWhitespace
-" - :StripWhitespace
-
-" autocmd
-autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+" autocmd custom filetype
+"   autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " augroup autoformat_settings
 "   autocmd FileType bzl AutoFormatBuffer buildifier

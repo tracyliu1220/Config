@@ -9,7 +9,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # vimrc
-ln -s ../vimrc ~/.vimrc
+ln -s ~/Config/vimrc ~/.vimrc
 
 # git
 git config --global user.name  "Tracy Liu"
