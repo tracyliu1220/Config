@@ -7,6 +7,7 @@ set shiftwidth=4
 set expandtab
 set cursorline
 set bg=dark
+set foldmethod=manual
 syntax enable
 
 " highlight
@@ -15,11 +16,11 @@ hi LineNr cterm=none ctermfg=grey ctermbg=none
 hi CursorLineNr cterm=none ctermfg=yellow ctermbg=none
 
 " imap
-:map {<CR> {<CR>}<Esc>ko
-:map tt<Right> <C-w><Right>
-:map tt<Left> <C-w><Left>
-:map tt<Up> <C-w><Up>
-:map tt<Down> <C-w><Down>
+imap {<CR> {<CR>}<Esc>ko
+map tt<Right> <C-w><Right>
+map tt<Left> <C-w><Left>
+map tt<Up> <C-w><Up>
+map tt<Down> <C-w><Down>
 map <F5> :tabN<LF>
 map <F6> :tabn<LF>
 map <F7> :tabe<Space>
