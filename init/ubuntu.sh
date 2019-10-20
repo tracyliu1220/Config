@@ -16,8 +16,8 @@ git config --global user.name  "Tracy Liu"
 git config --global user.email "tracyliu.cs06@nctu.edu.tw"
 git config --global color.ui true
 git config --global alias.lg "log --color --graph --all \
-	--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
-	%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
+    %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=600'
 
@@ -40,6 +40,7 @@ sudo apt -y install python3-pip
 
 # formatter
 sudo apt-get -y install clang-format
+sudo pip3 install yapf
 
 # bashrc
 cat ../bashrc >> ~/.bashrc
