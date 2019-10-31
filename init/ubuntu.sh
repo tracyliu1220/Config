@@ -18,6 +18,7 @@ git config --global color.ui true
 git config --global alias.lg "log --color --graph --all \
     --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
     %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+git config --global alias.lgs "log --stat"
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=600'
 
