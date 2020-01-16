@@ -24,6 +24,12 @@ map tt<Down> <C-w><Down>
 map <F5> :tabN<LF>
 map <F6> :tabn<LF>
 map <F7> :tabe<Space>
+map <F10> :!make<LF>
+
+" autocmd custom filetype
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType python map <F9> :w<LF>:!python3 %<LF>
 
 " Plug
 call plug#begin('~/.vim/plugged')
@@ -48,8 +54,6 @@ let g:airline_theme = "bubblegum"
 let g:better_whitespace_ctermcolor=153
 let g:better_whitespace_enabled=0
 
-" autocmd custom filetype
-"   autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " augroup autoformat_settings
 "   autocmd FileType bzl AutoFormatBuffer buildifier
@@ -64,5 +68,5 @@ let g:better_whitespace_enabled=0
 "   autocmd FileType vue AutoFormatBuffer prettier
 " augroup END
 
-call glaive#Install()
-Glaive codefmt clang_format_executable='/usr/bin/clang-format'
+" call glaive#Install()
+" Glaive codefmt clang_format_executable='/usr/bin/clang-format'
