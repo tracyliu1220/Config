@@ -17,10 +17,15 @@ hi CursorLineNr cterm=none ctermfg=yellow ctermbg=none
 
 " imap
 imap {<CR> {<CR>}<Esc>ko
+imap jj <Esc>
 map tt<Right> <C-w><Right>
+map ttl <C-w><Right>
 map tt<Left> <C-w><Left>
+map tth <C-w><Left>
 map tt<Up> <C-w><Up>
+map ttk <C-w><Up>
 map tt<Down> <C-w><Down>
+map ttj <C-w><Down>
 map <F5> :tabN<LF>
 map <F6> :tabn<LF>
 map <F7> :tabe<Space>
@@ -30,6 +35,7 @@ map <F10> :!make<LF>
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd FileType python map <F9> :w<LF>:!python3 %<LF>
+autocmd FileType cpp map <F9> :w<LF>:!g++ % :!./a.out<LF>
 
 " Plug
 call plug#begin('~/.vim/plugged')
