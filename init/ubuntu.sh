@@ -13,7 +13,7 @@ ln -s ~/Config/vimrc ~/.vimrc
 
 # git
 git config --global user.name  "Tracy Liu"
-git config --global user.email "tracyliu.cs06@nctu.edu.tw"
+git config --global user.email "tracyliu981220@gmail.com"
 git config --global color.ui true
 git config --global core.editor vim
 git config --global alias.lg "log --color --graph --all \
