@@ -18,6 +18,8 @@ hi CursorLineNr cterm=none ctermfg=yellow ctermbg=none
 " imap
 imap {<CR> {<CR>}<Esc>ko
 imap jj <Esc>
+imap <F3> <Esc>0i
+imap <F4> <Esc>$a
 map tt<Right> <C-w><Right>
 map ttl <C-w><Right>
 map tt<Left> <C-w><Left>
@@ -43,7 +45,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-" :NEARDTree
+" :NERDTree
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 " :EnableWhitespace
@@ -51,6 +53,7 @@ Plug 'ntpeters/vim-better-whitespace'
 " :StripWhitespace
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
+" :FormatCode
 Plug 'google/vim-glaive'
 
 call plug#end()
